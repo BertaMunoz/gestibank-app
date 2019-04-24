@@ -74,19 +74,28 @@ header h1{
     float: right;
     cursor: pointer;
 }
-/**** Aside ****/
-aside {
-    background-color: #eee;
-    padding: 1em 0;
-}
+/**** Menu ****/
 
-#content {
-    width: 100%;
+nav{
+    width: 85%;
+    margin: 20px 0;
     float: left;
 }
 
-#content h2 {
-    margin-bottom: 16px;
+nav a{
+    color: #000000;
+    padding: 5px 10px;
+}
+
+nav a:hover{
+    border-bottom: 1px #000 solid;
+}
+
+select.lang{
+    width: 10%;
+    margin: 0;
+    float: right;
+    cursor: pointer;
 }
 
 /**** Content ****/
@@ -100,10 +109,11 @@ aside {
 /**** Footer ****/
 footer {
     background: #9fc5f8;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
     columns: #000000;
     font-style: italic;
+    margin-top: 10px;
 }
 
 /**** Contact ****/
