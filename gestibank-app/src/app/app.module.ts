@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClientComponent } from './client/client/client.component';
+import { AddClientComponent } from './client/add-client/add-client.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    ClientComponent,
+    AddClientComponent
   ],
   imports: [
     BrowserModule,
