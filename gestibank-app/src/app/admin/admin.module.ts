@@ -5,7 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes } from '@angular/router';
 import { AcueilComponent } from './acueil/acueil.component';
 import { RouterModule } from '@angular/router';
-
+import { GestionConseillerComponent } from './gestion-conseiller/gestion-conseiller.component';
+import { ListClientComponent } from './list-client/list-client.component';
 
 
 const adminRoutes: Routes = [
@@ -13,23 +14,18 @@ const adminRoutes: Routes = [
     path: '',
     component: AdminComponent,
     children: [
-          {        path: '',
+          { 
+            path: '',
             component: AcueilComponent
+          },
+          { 
+            path: 'app-gestion-conseiller', 
+            component: GestionConseillerComponent
+          },
+          { 
+            path: 'app-list-client', 
+            component: ListClientComponent
           }
-            /*,
-          { 
-            path: 'edit/:id', 
-            component: SessionEditFormComponent 
-          },
-          { 
-            path: 'list', 
-            component: SessionItemListComponent 
-          },
-          { 
-            path: '',   
-            redirectTo: 'list', 
-            pathMatch: 'full' 
-          }*/
     ],
   }
 ];
@@ -37,7 +33,9 @@ const adminRoutes: Routes = [
 @NgModule({
   declarations: [
     AdminComponent,
-    AcueilComponent
+    AcueilComponent,
+    GestionConseillerComponent,
+    ListClientComponent
   ],
   imports: [
     CommonModule,
