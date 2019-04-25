@@ -1,9 +1,9 @@
 <section>
 
 
-
-<table>
     Gestion des conseillers
+<table>
+
   <tr>
     <th>Mle</th>
     <th>Nom</th>
@@ -13,6 +13,19 @@
     <th>Modifier</th>
   </tr>
 
+  <tr>
+    <td> <li *ngFor="let c of listConseillers"> {{c.mle }}  </li></td>
+    <td> <li *ngFor="let c of listConseillers"> {{c.nom}} </li></td>
+    <td> <li *ngFor="let c of listConseillers"> {{c.prenom}}</li></td>
+    <td> blabla</td>
+    <td> <a href=""> supprimer</a></td>
+    <td> <a href=""> modifier</a></td>
+  </tr>
 </table>
 
 </section>
+<div *ngFor="let c of listConseillers">
+
+  {{c.nom}}
+
+</div>
