@@ -10,14 +10,18 @@ import {Conseiller} from '../../model/conseiller';
 export class GestionConseillerComponent implements OnInit {
 
 
-  listConseillers = [
-    new Conseiller(0,"24/04/2019","TARDIOU","kim","tk@gmail.com","0700000000","5 rue de la fontaine",69000,"Lyon"),
-    new Conseiller(1,"12/03/2019","stephane","stephane","stephane@gmail.com","0711111111","10 rue jean jaures",69000,"Lyon")
-  ];
-  constructor( ) {
+  listConseillers =  [];
+
+  lcs: ConseillerService;
+
+  constructor(  ) {
+    this.lcs = new ConseillerService();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.listConseillers = this.lcs.getAll();
+    console.log(this.listConseillers);
+  }
 
 
 }
