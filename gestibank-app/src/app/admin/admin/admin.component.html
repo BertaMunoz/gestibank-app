@@ -1,11 +1,13 @@
 
  <h2>Espace Administration</h2>
     <nav>
-        <a href="../acueil/acueil.component.html"> Accueil Administration </a>
-        <a href=""> Gestion des conseillers </a>
-        <a href=""> Liste des Clients </a>
+        <a routerLink="'./app-acueil'"> Accueil Administration </a>
+<!--
+            <a [routerLink]="['/']"> Gestion des conseillers </a>
+        <a [routerLink]="['/']"> Liste des Clients </a>
+-->
     </nav>
    
  <section id="adminDaswboard">
-
+    <router-outlet></router-outlet>
  </section>

@@ -197,7 +197,7 @@ hr {
     margin: 0;
     padding: 0;
     outline: none;
-    position: relative;
+    /*position: relative;*/
     list-style-position: inside;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

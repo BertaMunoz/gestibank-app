@@ -3,44 +3,44 @@
     <fieldset>
         <legend>Information personnelle</legend>
         <label for="nom">Nom *</label>
-        <input type="text" id="nom" name="nom">
+        <input type="text" id="nom" name="nom" ngModel>
         <label for="prenom">Prénom *</label>
-        <input type="text" id="prenom" name="prenom">
+        <input type="text" id="prenom" name="prenom" ngModel>
         <label for="email">Email</label>
-        <input type="text" id="email" name="email">
+        <input type="text" id="email" name="email" ngModel>
         <label for="telephone">Téléphone *</label>
-        <input type="text" id="telephone" name="telephone">
+        <input type="text" id="telephone" name="telephone" ngModel>
         <label for="adresse">Adresse</label>
-        <textarea name="" id="" cols="30" rows="10" name="adresse"></textarea>
+        <textarea name="" id="" cols="30" rows="10" name="adresse" ngModel></textarea>
         <label for="codeP">Code postal</label>
-        <input type="text" id="codeP" name="codePostale">
+        <input type="text" id="codeP" name="codePostale" ngModel>
         <label for="ville">Ville</label>
-        <input type="text" id="ville" name="ville">
+        <input type="text" id="ville" name="ville" ngModel>
     </fieldset>
     <fieldset>
         <legend>Situation familiale</legend>
         <label for="situation">Situation</label>
 
-        <input type="radio" name="situation" value="Celibataire" id="Celibataire">
+        <input type="radio" name="situation" value="Celibataire" id="Celibataire" ngModel>
         <label for="Celibataire">Célibataire</label>
 
-        <input type="radio" name="situation" value="marie(e)" id="marie">
+        <input type="radio" name="situation" value="marie(e)" id="marie" ngModel>
         <label for="marie">Marié(e)</label>
 
-        <input type="radio" name="situation" value="divorse" id="divorse">
+        <input type="radio" name="situation" value="divorse" id="divorse" ngModel>
         <label for="divorse">Divorsé</label>
 
-        <input type="radio" name="situation" value="pacs" id="pacs">
+        <input type="radio" name="situation" value="pacs" id="pacs" ngModel>
         <label for="pacs">Pacs</label>
 
-        <input type="radio" name="situation" value="veuf(ve)" id="Veuf">
+        <input type="radio" name="situation" value="veuf(ve)" id="Veuf" ngModel>
         <label for="veuf">Veuf(ve)</label>
 
-        <input type="radio" name="situation" value="concubinage" id="concubinage">
+        <input type="radio" name="situation" value="concubinage" id="concubinage" ngModel>
         <label for="concubinage">Concubinage</label>
 
         <label for="nombreEnfant">Nombres d'enfants</label>
-        <input type="number" name="nombreEnfant" id="nombreEnfant">
+        <input type="number" name="nombreEnfant" id="nombreEnfant" ngModel>
     </fieldset>
 
     <fieldset>
@@ -56,5 +56,5 @@
         <input type="file" name="" id="">
     </fieldset>
 
-    <input type="submit" value="Envoyer ma demande">
+    <input type="submit" [disabled]="!createCompteForm.form.valid" value="Envoyer ma demande">
 </form>

@@ -1,29 +1,21 @@
-<section>
-  <h2>Bienvenue sur GestiBank, votre banque en ligne</h2>
-  <img src="" alt="">
-  <p class="paragraphe">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem fugit totam 
-    doloribus autem temporibus perspiciatis quia! Nobis perspiciatis temporibus enim accusantium velit 
-    unde dolores quaerat harum, repudiandae iusto rem!</p>
-  <p class="paragraphe">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem fugit totam 
-    doloribus autem temporibus perspiciatis quia! Nobis perspiciatis temporibus enim accusantium velit 
-    unde dolores quaerat harum, repudiandae iusto rem!</p>
-  <p class="paragraphe">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem fugit totam 
-    doloribus autem temporibus perspiciatis quia! Nobis perspiciatis temporibus enim accusantium velit 
-    unde dolores quaerat harum, repudiandae iusto rem!</p>
-</section>
-<aside class="aside">
-  <h2>Rejoingnez-nous</h2>
-  <p class="paragraphe">Lorem ipsum dolor sit amet adicing elit. Quisquam nisi libero 
-    sapiente quod cum molesae aspees aut, ipsum veris prum, coi ratione nihil 
-    explicabo? Quaerat veris prum, conseur ipsum iste illo qui.</p>
-    <a href="">Créer un compte</a>
-</aside>
-
+<nav>
+  <p>
+    <a [routerLink]="['/']">Accueil</a> 
+    <a href="">Offres</a> 
+    <a href="">Services</a> 
+    <a [routerLink]="['/createCompte']">Création compte</a> 
+    <a href="">Contact</a>
+    <a [routerLink]="['/adminDasboard']">admin</a> 
+    <a [routerLink]="['/conseillerDasboard']">conseiller</a> 
+    <a [routerLink]="['/clientDasboard']">client</a>
+  </p>
+</nav>
+<select class="lang" name="lang" id="lang">
+    <option value="francais">Français</option>
+    <option value="anglais">Anglais</option>
+</select>
 <hr class="clear">
 
-<aside class="convertisseur">
-  convertisseur
-</aside>
-<img src="" alt="">
+<router-outlet></router-outlet>
 
 <hr class="clear">

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-create-compte',
+  selector: 'createCompte',
   templateUrl: './create-compte.component.html',
   styleUrls: ['./create-compte.component.css']
 })
@@ -12,16 +12,21 @@ export class CreateCompteComponent implements OnInit {
   ngOnInit() {
   }
 
-  addSession(sessionItem) {
-    console.log(sessionItem['name']);
-    const session = {
-      "name": sessionItem['name'],
-      "theme": sessionItem['theme'],
-      "date": sessionItem['date'],
-      "duree": sessionItem['duree'],
-      "adress": sessionItem['adress'],
-      "participants": sessionItem['participants'],
-      "isCompleted": false
+  createCompteForm(compteItem) {
+    console.log(compteItem['name']);
+    const compte = {
+      "id": compteItem['id'],
+      "motDePasse": compteItem['motDePasse'],
+      "nom": compteItem['nom'],
+      "prenom": compteItem['prenom'],
+      "email": compteItem['email'],
+      "telephone": compteItem['telephone'],
+      "adresse": compteItem['adresse'],
+      "codePostale": compteItem['codePostale'],
+      "ville": compteItem['ville'],
+      "situation": compteItem['situation'],
+      "nombreEnfant": compteItem['nombreEnfant']
+      
     };
   }
 }
