@@ -78,7 +78,7 @@ header h1{
 
 nav{
     width: 85%;
-    margin: 20px 0;
+    margin: 30px 0;
     float: left;
 }
 
@@ -114,6 +114,7 @@ footer {
     columns: #000000;
     font-style: italic;
     margin-top: 10px;
+    font-size: 12px;
 }
 
 /**** Contact ****/
