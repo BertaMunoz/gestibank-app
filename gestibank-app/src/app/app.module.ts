@@ -6,16 +6,13 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AcueilComponent } from './admin/acueil/acueil.component';
 import { CreateCompteComponent } from './create-compte/create-compte.component';
 import { IndexComponent } from './index/index.component';
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AcueilComponent,
     CreateCompteComponent,
     IndexComponent
   ],

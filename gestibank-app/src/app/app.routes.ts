@@ -1,23 +1,17 @@
 import { Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { CreateCompteComponent } from './create-compte/create-compte.component';
+import { RouterModule } from '@angular/router';
 
 export const rootRouterConfig: Routes = [
-  { 
-    path: '',   
-    redirectTo: 'index', 
-    pathMatch: 'full' 
+  {
+    path: '',  component: IndexComponent
   },
   {
-    path: 'index',
-    component: IndexComponent
+    path: 'createCompte',   component: CreateCompteComponent
   },
   {
-    path: 'createCompte',
-    component: CreateCompteComponent
-  },
-  {
-    path: 'adminDasboard',
+    path: 'admin',
     loadChildren: './admin/admin.module#AdminModule'
   }
   /*,

@@ -4,15 +4,17 @@ import { AdminComponent } from './admin/admin.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes } from '@angular/router';
 import { AcueilComponent } from './acueil/acueil.component';
+import { RouterModule } from '@angular/router';
+
+
 
 const adminRoutes: Routes = [
   {
     path: '',
     component: AdminComponent,
     children: [
-          { 
-            path: 'app-acueil', 
-            component: AcueilComponent 
+          {        path: '',
+            component: AcueilComponent
           }
             /*,
           { 
@@ -33,9 +35,13 @@ const adminRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AdminComponent],
+  declarations: [
+    AdminComponent,
+    AcueilComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(adminRoutes),
   ],
   bootstrap: [AdminComponent]
 
