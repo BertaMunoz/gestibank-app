@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ClientComponent } from './client/client.component';
 import { AddClientComponent } from './add-client/add-client.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MonCompteComponent } from './mon-compte/mon-compte.component';
 
 const clientRoutes: Routes = [
   {
@@ -21,7 +22,8 @@ const clientRoutes: Routes = [
 @NgModule({
   declarations: [
     ClientComponent,
-    AddClientComponent
+    AddClientComponent,
+    MonCompteComponent
   ],
   imports: [
     CommonModule,
