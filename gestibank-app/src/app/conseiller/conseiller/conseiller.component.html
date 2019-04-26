@@ -1,0 +1,10 @@
+<h2>Bonjour Nom Prénom</h2>
+<nav>
+    <a [routerLink]="['./']"> Accueil </a>
+    <a [routerLink]="['./app-gestion-conseiller']"> Gestion des conseillers </a>
+    <a [routerLink]="['./app-list-client']"> Liste des clients </a>
+</nav>
+
+<section id="conseillerDaswboard">
+    <router-outlet></router-outlet>
+</section>

@@ -5,19 +5,21 @@ import { RouterModule } from '@angular/router';
 
 export const rootRouterConfig: Routes = [
   {
-    path: '',  component: IndexComponent
+    path: '',  
+    component: IndexComponent
   },
   {
-    path: 'createCompte',   component: CreateCompteComponent
+    path: 'createCompte',   
+    component: CreateCompteComponent
   },
   {
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule'
-  }/*,
+  },
   {
     path: 'conseiller',
-    loadChildren: ''
-  },
+    loadChildren: './conseiller/conseiller.module#ConseillerModule'
+  }/*,
   {
     path: 'client',
     loadChildren: ''
