@@ -34,6 +34,7 @@ const adminRoutes: Routes = [
             path: 'app-gestion-conseiller/app-add-conseiller', 
             component: AddConseillerComponent
           }
+          
     ],
   }
 ];

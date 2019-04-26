@@ -17,9 +17,13 @@ private fakeConseillers : any = [
    
   }
 
-  addConseiller(conseiller: { "mle": any; "dateEmbauche": any; "nom": any; "prenom": any; "email": any; "tel": any; "adresse": any; "codePostale": any; "ville": any; }) {
+ /* addConseiller(conseiller: { "mle": any; "dateEmbauche": any; "nom": any; "prenom": any; "email": any; "tel": any; "adresse": any; "codePostale": any; "ville": any; }) {
     throw new Error("Method not implemented.");
     return conseiller;
+  }*/
+  addConseiller(conseiller){
+    this.fakeConseillers.push(conseiller);
+    console.log(this.fakeConseillers);
   }
 
   delete(mle){
