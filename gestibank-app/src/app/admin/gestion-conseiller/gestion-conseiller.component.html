@@ -13,19 +13,14 @@
     <th>Modifier</th>
   </tr>
 
-  <tr>
-    <td> <li *ngFor="let c of listConseillers"> {{c.mle }}  </li></td>
-    <td> <li *ngFor="let c of listConseillers"> {{c.nom}} </li></td>
-    <td> <li *ngFor="let c of listConseillers"> {{c.prenom}}</li></td>
-    <td> blabla</td>
+  <tr *ngFor="let c of listConseillers" >
+    <td>  {{c.mle }}  </td>
+    <td>  {{c.nom}}</td>
+    <td>  {{c.prenom}}</td>
+    <td> 5 </td>
     <td> <a href=""> supprimer</a></td>
     <td> <a href=""> modifier</a></td>
   </tr>
 </table>
 
 </section>
-<div *ngFor="let c of listConseillers">
-
-  {{c.nom}}
-
-</div>
