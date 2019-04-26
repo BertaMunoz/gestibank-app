@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { CreateCompteComponent } from './create-compte/create-compte.component';
 import { IndexComponent } from './index/index.component';
 import { AccueilConseillerComponent } from './conseiller/accueil-conseiller/accueil-conseiller.component';
@@ -14,7 +15,7 @@ import { GestionClientComponent } from './conseiller/gestion-client/gestion-clie
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     CreateCompteComponent,
     IndexComponent,
     AccueilConseillerComponent,
