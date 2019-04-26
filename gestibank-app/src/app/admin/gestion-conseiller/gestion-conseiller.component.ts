@@ -11,10 +11,10 @@ export class GestionConseillerComponent implements OnInit {
 
 
   listConseillers =  [];
-
   lcs: ConseillerService;
 
   constructor(  ) {
+    
     this.lcs = new ConseillerService();
   }
 
@@ -22,6 +22,7 @@ export class GestionConseillerComponent implements OnInit {
     this.listConseillers = this.lcs.getAll();
     console.log(this.listConseillers);
   }
-
-
+  deleteRow(mle){
+     //this.lcs.delete(mle);
+}
 }

@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Conseiller} from "../model/conseiller";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConseillerService {
+  addConseiller(conseiller: { "mle": any; "dateEmbauche": any; "nom": any; "prenom": any; "email": any; "tel": any; "adresse": any; "codePostale": any; "ville": any; }) {
+    throw new Error("Method not implemented.");
+    return conseiller;
+  }
   constructor() { }
   getAll()  {
     const fakeConseillers = [
@@ -13,9 +18,6 @@ export class ConseillerService {
     ]
     return fakeConseillers;
   }
-/*
-  addConseiller(conseiller) {
-    conseiller.mle = fakeConseillers.length + 1;
-    fakeConseillers.push(conseiller);
-   }*/
+
+  
 }

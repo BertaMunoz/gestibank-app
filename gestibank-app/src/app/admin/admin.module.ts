@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminComponent } from './admin/admin.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes } from '@angular/router';
-import { AcueilComponent } from './acueil/acueil.component';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+
+import { AdminComponent } from './admin/admin.component';
+import { AcueilComponent } from './acueil/acueil.component';
 import { GestionConseillerComponent } from './gestion-conseiller/gestion-conseiller.component';
 import { ListClientComponent } from './list-client/list-client.component';
 import { ConseillerService } from '../conseiller/conseiller.service';
@@ -29,7 +31,7 @@ const adminRoutes: Routes = [
             component: ListClientComponent
           },
           { 
-            path: 'app-add-conseiller', 
+            path: 'app-gestion-conseiller/app-add-conseiller', 
             component: AddConseillerComponent
           }
     ],
@@ -46,6 +48,7 @@ const adminRoutes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(adminRoutes),
   ],
   providers: [ConseillerService],

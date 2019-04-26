@@ -13,9 +13,10 @@ export class AddConseillerComponent implements OnInit {
   ngOnInit() {
   }
 
-  /*
-  addConseiller(conseillerItem) {
+
+  /*addNewConseiller(conseillerItem) {
     console.log(conseillerItem['mle']);
+
     const conseiller = {
       "mle": conseillerItem['mle'],
       "dateEmbauche": conseillerItem['dateEmbauche'],
@@ -24,15 +25,15 @@ export class AddConseillerComponent implements OnInit {
       "email": conseillerItem['email'],
       "tel": conseillerItem['tel'],
       "adresse": conseillerItem['adresse'],
+      "codePostale": conseillerItem['codePostale'],
       "ville": conseillerItem['ville']
-    };
-    
+    };    
+      
     this.conseillerService.addConseiller(conseiller).subscribe(res => {
       console.log(res);
     }, (err) => {
       console.log(err);
     })
-  }
-  */
+  }*/
 
 }
