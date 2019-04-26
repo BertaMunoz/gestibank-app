@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ClientService } from '../client.service'
 
 @Component({
   selector: 'app-add-client',
@@ -8,13 +9,14 @@ import { NgForm } from '@angular/forms';
 })
 export class AddClientComponent implements OnInit {
 
-  constructor() { }
+  constructor(private clientService: ClientService) { }
 
   ngOnInit() {
   }
 
   onSubmit(compteItem) {
     console.log(compteItem['name']);
+
     const compte = {
       "id": compteItem['id'],
       "motDePasse": compteItem['motDePasse'],
@@ -29,6 +31,7 @@ export class AddClientComponent implements OnInit {
       "nombreEnfant": compteItem['nombreEnfant']
       
     };
+    this.clientService.addClient(compte);
   }
 }
 

@@ -1,12 +1,12 @@
 <h2>Mes informations</h2>
-<form  (ngSubmit)="OnSubmit()" method="POST">
+<form  (ngSubmit)="addClient()" method="POST">
   <fieldset>
         <legend>Information de Connection</legend>
-        <label for="identifiant">Identifiant *</label>
+        <label for="identifiant">Identifiant </label>
         <input type="text" id="identifiant" name="identifiant" ngModel>
         <label for="motDePasse">Mot de Passe</label>
         <input type="password" id="motDePasse" name="motDePasse" ngModel>
-  </fieldset>  
+  </fieldset> 
   <fieldset>
         <legend>Informations personnelles</legend>
         <label for="nom">Nom *</label>
@@ -24,7 +24,7 @@
         <label for="ville">Ville</label>
         <input type="text" id="ville" name="ville" ngModel>
     </fieldset>
-    <fieldset>
+   <fieldset>
         <legend>Situation familiale</legend>
         <label for="situation">Situation</label>
 
@@ -54,10 +54,10 @@
         <legend>Compte</legend>
 
         <label for="conseiller">Conseiller</label>
-        <input type="text" name="" id="">
-
+        <input type="text" name="conseiller" id="" ngModel>
+<!--
         <label for="numeroDeCompte">Numéro de compte</label>
-        <input type="text" name="" id="">
+        <input type="text" name="numeroDeCompte" id="" ngModel>
 
         <label for="type">Type</label>
 
@@ -71,7 +71,7 @@
         <label for="remunere">Rémuneré</label>
     
         <label for="decAut">Découvert autorisé</label>
-        <select >
+        <select ngModel>
           <option>Pas de découvert</option>
           <option>200</option>
           <option>500</option>
@@ -79,14 +79,14 @@
         </select>
 
         <label for="plafond">Plafond autorisé</label>
-        <select >
+        <select ngModel>
           <option>Pas de plafond</option>
           <option>200</option>
           <option>500</option>
           <option>1000</option>
         </select>
-        
-    </fieldset>
+        -->
+    </fieldset> 
 
     <input type="submit" [disabled]="" value="Envoyer ma demande">
 </form>
