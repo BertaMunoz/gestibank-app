@@ -22,7 +22,7 @@ export class GestionConseillerComponent implements OnInit {
     this.listConseillers = this.lcs.getAll();
     console.log(this.listConseillers);
   }
-  deleteRow(mle){
-     //this.lcs.delete(mle);
-}
+  deleteRow(mle){    
+     this.lcs.delete(mle);
+  }
 }
