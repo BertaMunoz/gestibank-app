@@ -29,11 +29,13 @@ const adminRoutes: Routes = [
           { 
             path: 'app-list-client', 
             component: ListClientComponent
-          },
+          }
+          /*,
           { 
             path: 'app-gestion-conseiller/app-add-conseiller', 
             component: AddConseillerComponent
-          }
+          }*/
+          
     ],
   }
 ];
