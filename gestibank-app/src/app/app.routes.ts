@@ -22,6 +22,6 @@ export const rootRouterConfig: Routes = [
   }/*,
   {
     path: 'client',
-    loadChildren: ''
+    loadChildren: './client/client.module#ClientModule'
   }*/
 ];
