@@ -14,7 +14,7 @@ export class AddConseillerComponent implements OnInit {
   }
 
 
-  /*addNewConseiller(conseillerItem) {
+  addNewConseiller(conseillerItem) {
     console.log(conseillerItem['mle']);
 
     const conseiller = {
@@ -28,12 +28,7 @@ export class AddConseillerComponent implements OnInit {
       "codePostale": conseillerItem['codePostale'],
       "ville": conseillerItem['ville']
     };    
-      
-    this.conseillerService.addConseiller(conseiller).subscribe(res => {
-      console.log(res);
-    }, (err) => {
-      console.log(err);
-    })
-  }*/
+    this.conseillerService.addConseiller(conseiller);
+  }
 
 }
