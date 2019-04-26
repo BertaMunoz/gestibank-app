@@ -28,5 +28,5 @@ export class GestionConseillerComponent implements OnInit {
             this.listConseillers.splice(i,1);
         }
     }
-}
+  }
 }
