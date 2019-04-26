@@ -1,0 +1,22 @@
+#gestionConseiller {
+    border: solid 1px darksalmon;
+    padding: 10px;
+    width: 100%;
+    background-color: paleturquoise;
+    
+}
+
+#gestionConseiller h2{
+    color: chocolate;
+}
+
+#gestionConseiller table{
+    background-color: aquamarine;
+    border: solid blueviolet 2px;
+    border-collapse: collapse;
+}
+
+#gestionConseiller td, #gestionConseiller th{
+    border: solid blueviolet 2px;
+}
+

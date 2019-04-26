@@ -25,4 +25,26 @@ export class GestionConseillerComponent implements OnInit {
   deleteRow(mle){    
      this.lcs.delete(mle);
   }
+  update(){
+    this.listConseillers = this.lcs.getAll();
+
+    console.log("coucou");
+    console.log(this.lcs.getAll());
+  }
+  addNewConseiller(conseillerItem) {
+    console.log(conseillerItem['mle']);
+
+    const conseiller = {
+      "mle": conseillerItem['mle'],
+      "dateEmbauche": conseillerItem['dateEmbauche'],
+      "nom": conseillerItem['nom'],
+      "prenom": conseillerItem['prenom'],
+      "email": conseillerItem['email'],
+      "tel": conseillerItem['tel'],
+      "adresse": conseillerItem['adresse'],
+      "codePostale": conseillerItem['codePostale'],
+      "ville": conseillerItem['ville']
+    };    
+    this.lcs.addConseiller(conseiller);
+  }
 }
