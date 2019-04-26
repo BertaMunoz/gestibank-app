@@ -5,7 +5,6 @@ import { Conseiller} from "../model/conseiller";
   providedIn: 'root'
 })
 export class ConseillerService {
-
   constructor() { }
   getAll()  {
     const fakeConseillers = [
@@ -13,6 +12,10 @@ export class ConseillerService {
       new Conseiller(1,"12/03/2019","stephane","stephane","stephane@gmail.com","0711111111","10 rue jean jaures",69000,"Lyon")
     ]
     return fakeConseillers;
-   
   }
+/*
+  addConseiller(conseiller) {
+    conseiller.mle = fakeConseillers.length + 1;
+    fakeConseillers.push(conseiller);
+   }*/
 }

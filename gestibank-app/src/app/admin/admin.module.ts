@@ -7,6 +7,8 @@ import { AcueilComponent } from './acueil/acueil.component';
 import { RouterModule } from '@angular/router';
 import { GestionConseillerComponent } from './gestion-conseiller/gestion-conseiller.component';
 import { ListClientComponent } from './list-client/list-client.component';
+import { ConseillerService } from '../conseiller/conseiller.service';
+import { AddConseillerComponent } from './add-conseiller/add-conseiller.component';
 
 
 const adminRoutes: Routes = [
@@ -25,6 +27,10 @@ const adminRoutes: Routes = [
           { 
             path: 'app-list-client', 
             component: ListClientComponent
+          },
+          { 
+            path: 'app-add-conseiller', 
+            component: AddConseillerComponent
           }
     ],
   }
@@ -35,12 +41,14 @@ const adminRoutes: Routes = [
     AdminComponent,
     AcueilComponent,
     GestionConseillerComponent,
-    ListClientComponent
+    ListClientComponent,
+    AddConseillerComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(adminRoutes),
   ],
+  providers: [ConseillerService],
   bootstrap: [AdminComponent]
 
 })
