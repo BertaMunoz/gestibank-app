@@ -13,13 +13,13 @@ export const rootRouterConfig: Routes = [
   {
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule'
-  }/*,
+  },/*
   {
     path: 'conseiller',
     loadChildren: ''
-  },
+  },*/
   {
     path: 'client',
-    loadChildren: ''
-  }*/
+    loadChildren: './client/client.module#ClientModule'
+  }
 ];
