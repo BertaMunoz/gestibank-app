@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { ConseillerComponent } from './conseiller.component';
+import { ConseillerService } from './conseiller.service';
 
 @NgModule({
   declarations: [ConseillerComponent],
@@ -10,7 +11,7 @@ import { ConseillerComponent } from './conseiller.component';
     CommonModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [ConseillerService],
   bootstrap: [ConseillerComponent]
 })
 export class ConseillerModule { }

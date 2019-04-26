@@ -6,15 +6,29 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ConseillerService {
-
-  constructor() { }
-  getAll()  {
-    const fakeConseillers = [
+private fakeConseillers : any = [
       new Conseiller(0,"24/04/2019","TARDIOU","kim","tk@gmail.com","0700000000","5 rue de la fontaine",69000,"Lyon"),
       new Conseiller(1,"12/03/2019","stephane","stephane","stephane@gmail.com","0711111111","10 rue jean jaures",69000,"Lyon")
-    ]
-    return fakeConseillers;
+    ];
+  constructor() { }
+  getAll()  {
+    
+    return this.fakeConseillers;
    
   }
-  
+
+  addConseiller(conseiller: { "mle": any; "dateEmbauche": any; "nom": any; "prenom": any; "email": any; "tel": any; "adresse": any; "codePostale": any; "ville": any; }) {
+    throw new Error("Method not implemented.");
+    return conseiller;
+  }
+
+  delete(mle){
+    for(let i = 0; i < this.fakeConseillers.length; ++i){
+      
+      if (this.fakeConseillers[i].mle == mle) { 
+        this.fakeConseillers.splice(i,1);
+      }
+    }
+    console.log(this.fakeConseillers);
+  }
 }
