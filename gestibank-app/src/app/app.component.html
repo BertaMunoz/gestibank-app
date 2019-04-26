@@ -1,7 +1,21 @@
-<section>
-  <app-client></app-client>
-  <app-add-client></app-add-client>
-  <router-outlet></router-outlet>
-  
+<nav id="menu">
+  <p>
+    <a [routerLink]="['/']">Accueil</a> 
+    <a href="">Offres</a> 
+    <a href="">Services</a> 
+    <a [routerLink]="['/createCompte']">Création compte</a> 
+    <a href="">Contact</a>
+    <a [routerLink]="['/admin']">admin</a>
+    <a [routerLink]="['/conseiller']">conseiller</a> 
+    <a [routerLink]="['/client']">client</a>
+  </p>
+</nav>
+<select class="lang" name="lang" id="lang">
+    <option value="francais">Français</option>
+    <option value="anglais">Anglais</option>
+</select>
+<hr class="clear">
 
-</section>
+<router-outlet></router-outlet>
+
+<hr class="clear">

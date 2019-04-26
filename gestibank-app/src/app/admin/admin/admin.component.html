@@ -1,0 +1,11 @@
+
+ <h2>Espace Administration</h2>
+    <nav>
+        <a [routerLink]="['./']"> Accueil administration </a>
+        <a [routerLink]="['./app-gestion-conseiller']"> Gestion des conseillers </a>
+        <a [routerLink]="['./app-list-client']"> Liste des clients </a>
+    </nav>
+   
+ <section id="adminDaswboard">
+    <router-outlet></router-outlet>
+ </section>

@@ -1,0 +1,17 @@
+<section>   
+  <h3>Gestion des notifications</h3>
+  <table>
+    <tr>
+      <th>Date/Heure</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Attribution</th>
+    </tr>
+    <tr li *ngFor="let name of listeNotif">
+      <td> {{name.date }}  </td>
+      <td> {{name.nom}} </td>
+      <td> {{name.prenom}}</td>
+      <td> <a href="">{{name.choix}}</a></td>
+    </tr>
+  </table>
+  </section>

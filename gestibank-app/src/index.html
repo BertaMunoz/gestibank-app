@@ -6,23 +6,35 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css" type="text/html">
 </head>
 <body>
   <header>
-    <div class="content">
+    <div class="global">
       <div class="logo">
         <img src="assets/img/logo.png" alt="">
         <h1>GestiBank</h1>
       </div>
       <div class="login">
-        <input type="text" />
-        <input type="text" />
-        <input type="submit" />
+        <div class="input">
+          <input type="text" placeholder="login"/>
+          <input type="text" placeholder="mot de passe"/>
+        </div>
+        <button>
+          <img src="assets/img/login.png" alt="">
+        </button>
       </div>
     </div>
   </header>
-  <app-root></app-root>
-  <app-client></app-client>
+  
+  <div class="global">
+     <app-root></app-root>
+  </div>
 
+  <footer>
+    <div class="global">
+      <p>@2019 - Réalisée par CHAFFURIN Noëlle, MUNOZ Berta et TARDIOU Kim</p>
+    </div>
+  </footer>
 </body>
 </html>

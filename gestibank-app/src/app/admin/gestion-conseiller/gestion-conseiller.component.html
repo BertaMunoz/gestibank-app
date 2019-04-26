@@ -1,0 +1,27 @@
+<section>
+
+
+    Gestion des conseillers
+<table>
+
+  <tr>
+    <th>Mle</th>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Nombre clients</th>
+    <th>Supprimer</th>
+    <th>Modifier</th>
+  </tr>
+
+
+  <tr *ngFor="let c of listConseillers">
+    <td> {{c.mle }} </td>
+    <td> {{c.nom}} </td>
+    <td> {{c.prenom}} </td>
+   <td>5</td>
+    <td> <a (click)="deleteRow(c.mle)"> supprimer</a></td>
+    <td> <a href="" > modifier</a></td>
+  </tr>
+</table>
+
+</section>
