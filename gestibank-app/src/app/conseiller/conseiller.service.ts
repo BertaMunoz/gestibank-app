@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Conseiller} from "../model/conseiller";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,4 +16,5 @@ export class ConseillerService {
     return fakeConseillers;
    
   }
+  
 }

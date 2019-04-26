@@ -7,11 +7,11 @@
       <th>Prenom</th>
       <th>Attribution</th>
     </tr>
-    <tr>
-      <td> <li *ngFor="let name of listeNotif"> {{name.date }}  </li></td>
-      <td> <li *ngFor="let name of listeNotif">  {{name.nom}} </li></td>
-      <td> <li *ngFor="let name of listeNotif"> {{name.prenom}}</li></td>
-      <td> <a href=""><li *ngFor="let name of listeNotif"> {{name.choix}}</li></a></td>
+    <tr li *ngFor="let name of listeNotif">
+      <td> {{name.date }}  </td>
+      <td> {{name.nom}} </td>
+      <td> {{name.prenom}}</td>
+      <td> <a href="">{{name.choix}}</a></td>
     </tr>
   </table>
   </section>

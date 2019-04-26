@@ -13,24 +13,13 @@ export const rootRouterConfig: Routes = [
   {
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule'
-  }
-  /*,
+  }/*,
   {
-    path: 'conseillerDasboard',
+    path: 'conseiller',
     loadChildren: ''
   },
-  { path: 'github', component: RepoBrowserComponent,
-    children: [
-      { path: '', component: RepoListComponent },
-      { path: ':org', component: RepoListComponent,
-        children: [
-          { path: '', component: RepoDetailComponent },
-          { path: ':repo', component: RepoDetailComponent }
-        ]
-      }]
-  },
   {
-    path: 'clientDasboard',
+    path: 'client',
     loadChildren: ''
   }*/
 ];

@@ -1,14 +1,14 @@
-section{
+section#index{
     width: 70%;
     display: inline-block;
     margin-right: 5%;
 }
  
-section h2{
+section#index h2{
     margin-bottom: 20px;
 }
 
-section img{
+section#index img{
     width: 150px;
     height: 150px;
     float: left;
