@@ -1,3 +1,100 @@
-<p>
-  mon-compte works!
-</p>
+<h2>Mes informations</h2>
+<form #modifCompteForm="ngForm" (ngSubmit)="modifCompte(modifCompteForm.value)" method="POST">
+  <fieldset>
+    <legend>Information de connexion</legend>
+    <label for="id">identifiant</label>
+    <input type="text" name="id" id="id" ngModel>
+    <label for="motDePasse">Mot de passe</label>
+    <input type="text" name="motDePasse" id="motDePasse" ngModel>
+  </fieldset>
+  <fieldset>
+    <legend>Information personnelle</legend>
+    <label for="nom">Nom *</label>
+    <input type="text" id="nom" name="nom" ngModel>
+    <label for="prenom">Prénom *</label>
+    <input type="text" id="prenom" name="prenom" ngModel>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" ngModel>
+    <label for="telephone">Téléphone *</label>
+    <input type="text" id="telephone" name="telephone" ngModel>
+    <label for="adresse">Adresse</label>
+    <textarea name="" id="" cols="30" rows="5" name="adresse" ngModel></textarea>
+    <label for="codeP">Code postal</label>
+    <input type="text" id="codeP" name="codePostale" ngModel>
+    <label for="ville">Ville</label>
+    <input type="text" id="ville" name="ville" ngModel>
+  </fieldset>
+
+  <fieldset>
+    <legend>Situation familiale</legend>
+    <p>Situation</p>
+    <div>
+      <div>
+        <input type="radio" name="situation" value="Celibataire" id="Celibataire" ngModel>
+        <label for="Celibataire">Célibataire</label>
+      </div>
+      <div>
+        <input type="radio" name="situation" value="marie(e)" id="marie" ngModel>
+        <label for="marie">Marié(e)</label>
+      </div>
+      <div>
+        <input type="radio" name="situation" value="divorse" id="divorse" ngModel>
+        <label for="divorse">Divorsé</label>
+      </div>
+    </div>
+    <div>
+      <div>
+        <input type="radio" name="situation" value="pacs" id="pacs" ngModel>
+        <label for="pacs">Pacs</label>
+      </div>
+      <div>
+        <input type="radio" name="situation" value="veuf(ve)" id="Veuf" ngModel>
+        <label for="veuf">Veuf(ve)</label>
+      </div>
+      <div>
+        <input type="radio" name="situation" value="concubinage" id="concubinage" ngModel>
+        <label for="concubinage">Concubinage</label>
+      </div>
+    </div>
+    <label for="nombreEnfant">Nombres d'enfants</label>
+    <input type="number" name="nombreEnfant" id="nombreEnfant" ngModel>
+  </fieldset>
+
+  <fieldset>
+    <legend>Compte</legend>
+
+    <label for="nameConseiller">Conseiller</label>
+    <input type="text" name="nameConseiller" id="nameConseiller" ngModel>
+    <label for="nCompte">N° de compte</label>
+    <input type="text" name="nCompte" id="nCompte" ngModel>
+    <p>Type</p>
+    <div>
+      <input type="radio" name="typeCompte" value="ssDecouvert" id="ssDecouvert" ngModel>
+      <label for="ssDecouvert">Courant sans découvert</label>
+    </div>
+    <div>
+      <input type="radio" name="typeCompte" value="avDecouvert" id="avDecouvert" ngModel>
+      <label for="avDecouvert">Courant avec découvert</label>
+    </div>
+    <div>
+      <input type="radio" name="typeCompte" value="remunerer" id="remunerer" ngModel>
+      <label for="remunerer">Rémunérer</label>
+    </div>
+    <label for="decouvert">Découvert autorisé</label>
+    <select name="decouvert" id="decouvert" ngModel>
+      <option value="Null">Pas de découvert</option>
+      <option value="200">200</option>
+      <option value="400">400</option>
+      <option value="600">600</option>
+    </select>
+    <label for="plafond">Plafond autorisé</label>
+    <select name="plafond" id="plafond" ngModel>
+      <option value="Null">Pas de plafond</option>
+      <option value="1000">1000</option>
+      <option value="2000">2000</option>
+      <option value="3000">3000</option>
+    </select>
+  </fieldset>
+
+  <input type="submit" [disabled]="!modifCompteForm.form.valid" value="Envoyer ma demande">
+</form>

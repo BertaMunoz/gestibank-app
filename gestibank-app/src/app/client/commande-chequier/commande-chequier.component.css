@@ -1,23 +1,12 @@
+h3{
+    font-weight: bold;
+    margin-bottom: 2%;
+}
 p{
     font-weight: bold;
 }
-fieldset{
-    width:75%;
-    padding: 4%;
-}
 label{
-    width: 25%;
-    display: inline-block;
-    vertical-align: top;
-}
-input, textarea, select{
-    width: 75%;
-}
-fieldset div{
-    margin: 1% 0;
-}
-fieldset div div{
-    width: 33%;
+    width: 40%;
     display: inline-block;
 }
 input[type="radio"]{
@@ -25,10 +14,7 @@ input[type="radio"]{
     margin: 0 2%;
     min-height: auto;
 }
-fieldset div > label{
-    width: 50%;
-}
-input[type="number"]{
+select{
     width: 50px;
     margin-left: 15px;
 }

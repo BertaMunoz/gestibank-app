@@ -1,0 +1,26 @@
+#adminDaswboard{
+    border: 1px solid #000000;
+    background-color: #07376367;
+    padding: 2%;
+    width: 85%;
+    display: inline-flex;
+}
+h2{
+    margin-left: 15%;
+    padding-bottom: 1%;
+    font-weight: bold;
+}
+nav{
+    width: 15%;
+    display: inline-block;
+    vertical-align: top;
+}
+nav a{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    border-top-left-radius:  10%;
+    border-bottom-left-radius: 10%;
+    background-color: #07376367;
+    display: inline-block;
+    width: 100%;
+}

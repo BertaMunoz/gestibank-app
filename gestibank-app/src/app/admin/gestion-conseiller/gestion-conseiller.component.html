@@ -1,63 +1,64 @@
 
-<button (click)="update()">ffffff </button>
+<!--<button (click)="update()">ffffff </button>-->
 <section id="gestionConseiller">
-    <h2>Gestion des conseillers</h2>
-    <br>
-<table>
+  <h3>Gestion des conseillers</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Mle</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Nombre clients</th>
+        <th>Supprimer</th>
+        <th>Modifier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of listConseillers">
+        <td> {{c.mle }} </td>
+        <td> {{c.nom}} </td>
+        <td> {{c.prenom}} </td>
+        <td>5</td>
+        <td> <a (click)="deleteRow(c.mle)"> supprimer </a></td>
+        <td> <a href="" > modifier</a></td>
+      </tr>
+    </tbody> 
+  </table>
 
-  <tr>
-    <th>Mle</th>
-    <th>Nom</th>
-    <th>Prénom</th>
-    <th>Nombre clients</th>
-    <th>Supprimer</th>
-    <th>Modifier</th>
-  </tr>
+ <!-- <a class="lien" [routerLink]="['./app-add-conseiller']">Nouveau Conseiller</a>-->
+</section>
 
+<section id="addConseiller">
+    <h2>Nouveau conseiller</h2>
 
-  <tr *ngFor="let c of listConseillers">
-    <td> {{c.mle }} </td>
-    <td> {{c.nom}} </td>
-    <td> {{c.prenom}} </td>
-    <td>5</td>
-    <td> <a (click)="deleteRow(c.mle)"> supprimer </a></td>
-    <td> <a href="" > modifier</a></td>
-  </tr>
-</table>
-<br>
-<a [routerLink]="['./app-add-conseiller']">Nouveau Conseiller</a>
-
-<h2>Nouveau conseiller</h2>
-
-  <form #addNewConseillerForm="ngForm" (ngSubmit)="addNewConseiller(addNewConseillerForm.value)" method="POST">
-  <label for="mle">Mle *</label>
-  <input type="text" name="mle" id="mle"  ngModel>
-
-  <label for="dateEmbauche">Date d'embauche *</label>
-  <input type="date" name="dateEmbauche" id="dateEmbauche" ngModel>
-
-  <label for="nom">Nom *</label>
-  <input type="text" id="nom" name="nom" ngModel>
-
-  <label for="prenom">Prénom *</label>
-  <input type="text" id="prenom" name="prenom" ngModel>
-
-  <label for="email">Email</label>
-  <input type="text" id="email" name="email" ngModel>
-
-  <label for="tel">Téléphone *</label>
-  <input type="text" id="tel" name="tel" ngModel>
-
-  <label for="adresse">Adresse</label>
-  <textarea name="adresse" id="adresse" cols="30" rows="10" ngModel></textarea>
-
-  <label for="codePostale">Code postal</label>
-  <input type="text" id="codePostale" name="codePostale" ngModel>
-
-  <label for="ville">Ville</label>
-  <input type="text" id="ville" name="ville" ngModel>
-
-  <input type="submit" [disabled]="!addNewConseillerForm.form.valid" value="Envoyer ma demande">
-</form>
-
+    <form #addNewConseillerForm="ngForm" (ngSubmit)="addNewConseiller(addNewConseillerForm.value)" method="POST">
+    <label for="mle">Mle *</label>
+    <input type="text" name="mle" id="mle"  ngModel>
+  
+    <label for="dateEmbauche">Date d'embauche *</label>
+    <input type="date" name="dateEmbauche" id="dateEmbauche" ngModel>
+  
+    <label for="nom">Nom *</label>
+    <input type="text" id="nom" name="nom" ngModel>
+  
+    <label for="prenom">Prénom *</label>
+    <input type="text" id="prenom" name="prenom" ngModel>
+  
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" ngModel>
+  
+    <label for="tel">Téléphone *</label>
+    <input type="text" id="tel" name="tel" ngModel>
+  
+    <label for="adresse">Adresse</label>
+    <textarea name="adresse" id="adresse" cols="30" rows="5" ngModel></textarea>
+  
+    <label for="codePostale">Code postal</label>
+    <input type="text" id="codePostale" name="codePostale" ngModel>
+  
+    <label for="ville">Ville</label>
+    <input type="text" id="ville" name="ville" ngModel>
+  
+    <input type="submit" [disabled]="!addNewConseillerForm.form.valid" value="Envoyer ma demande">
+  </form>
 </section>

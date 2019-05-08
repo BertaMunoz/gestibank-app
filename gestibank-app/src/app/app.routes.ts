@@ -19,9 +19,9 @@ export const rootRouterConfig: Routes = [
   {
     path: 'conseiller',
     loadChildren: './conseiller/conseiller.module#ConseillerModule'
-  }/*,
+  },
   {
     path: 'client',
     loadChildren: './client/client.module#ClientModule'
-  }*/
+  }
 ];

@@ -9,10 +9,10 @@ export class AcueilComponent implements OnInit {
 
   listeNotif = [
     {
-      date : "2018-04-21", nom : "tardiou", prenom : "kim", choix: "choisir conseiler"
+      date : "2018-04-21", nom : "tardiou", prenom : "kim", choix: "choisir conseiller"
     },
     {
-      date : "2018-04-21", nom : "munoz", prenom : "berta", choix: "choisir conseiler"
+      date : "2018-04-21", nom : "munoz", prenom : "berta", choix: "choisir conseiller"
     }
   ];
   constructor() { }

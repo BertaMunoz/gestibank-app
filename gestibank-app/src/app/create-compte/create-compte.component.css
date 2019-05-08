@@ -1,0 +1,58 @@
+.right{
+    width: 48%;
+    float: right;
+    margin-left: 2%;
+}
+.left{
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+}
+p{
+    font-weight: bold;
+}
+fieldset{
+    padding: 4%;
+}
+.left label{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+.left input, .left textarea{
+    width: 75%;
+}
+.right div{
+    margin: 1% 0;
+}
+.right div div{
+    width: 33%;
+    display: inline-block;
+}
+.right input[type="radio"]{
+    width: 20px;
+    margin: 0 2%;
+    min-height: auto;
+}
+.right label{
+    width: 40%;
+}
+.right input[type="number"]{
+    width: 50px;
+    margin-left: 15px;
+}
+input[type="submit"]{
+    display: inline-block;
+    background-color: #073763;
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #073763;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: #ffffff;
+    color: #073763;
+}

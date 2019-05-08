@@ -1,22 +1,75 @@
-#gestionConseiller {
-    border: solid 1px darksalmon;
-    padding: 10px;
-    width: 100%;
-    background-color: paleturquoise;
-    
+h3{
+    font-weight: bold;
+    margin-bottom: 2%;
 }
-
-#gestionConseiller h2{
-    color: chocolate;
-}
-
-#gestionConseiller table{
-    background-color: aquamarine;
-    border: solid blueviolet 2px;
+table{
+    border: 2px solid #000000;
     border-collapse: collapse;
+    display: inline-block;
+    position: left;
+}
+thead{
+    border-bottom: 2px solid #000000;
+    font-weight: bold;
+    background-color: #a7a7a7;
+    text-align: center;
+}
+th{
+    padding: 5px;
+}
+tbody{
+    background-color: #ffffff;
+    text-align: center;
+}
+tbody tr:nth-child(even){
+    background-color: #d8d8d8;
+}
+td{
+    min-width: 120px;
+    padding: 5px;
+}
+td a{
+    color: #000000;
+    padding: 2% 5%;
+    background-color: #a7a7a7;
+    border-radius: 20%;
+    cursor: pointer;
+}
+td a:hover{
+    background-color: #073763;
+    color:#ffffff;
+}
+a.lien{
+    color: #073763;
+    display: inline-block; 
+}
+a.lien:hover{
+    text-decoration: underline;
 }
 
-#gestionConseiller td, #gestionConseiller th{
-    border: solid blueviolet 2px;
+#addConseiller{
+    margin-top: 3%;
 }
-
+label{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+input, textarea{
+    width: 75%;
+}
+input[type="submit"]{
+    display: inline-block;
+    background-color: #073763;
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #073763;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: #ffffff;
+    color: #073763;
+}

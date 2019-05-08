@@ -1,0 +1,40 @@
+h3{
+    font-weight: bold;
+    margin-bottom: 2%
+}
+table{
+    border: 2px solid #000000;
+    border-collapse: collapse;
+    display: inline-block;
+    position: left;
+}
+thead{
+    border-bottom: 2px solid #000000;
+    font-weight: bold;
+    background-color: #a7a7a7;
+    text-align: center;
+}
+th{
+    padding: 5px;
+}
+tbody{
+    background-color: #ffffff;
+    text-align: center;
+}
+tbody tr:nth-child(even){
+    background-color: #d8d8d8;
+}
+td{
+    min-width: 170px;
+    padding: 5px;
+}
+td a{
+    color: #000000;
+    padding: 2% 5%;
+    background-color: #a7a7a7;
+    border-radius: 20%;
+}
+td a:hover{
+    background-color: #073763;
+    color:#ffffff;
+}

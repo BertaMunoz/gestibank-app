@@ -26,7 +26,6 @@ export class CreateCompteComponent implements OnInit {
       "ville": compteItem['ville'],
       "situation": compteItem['situation'],
       "nombreEnfant": compteItem['nombreEnfant']
-      
     };
   }
 }

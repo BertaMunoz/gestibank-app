@@ -1,10 +1,12 @@
-<h2>Espace Client</h2>
+<h2>Bienvenue Nom Prénom</h2>
 <nav>
-    <a [routerLink]="['./']"> Accueil Client </a>
-    <a [routerLink]="['./app-add-client']"> Informations Clients </a>
-    
+    <a [routerLink]="['./']">Accueil </a>
+    <a [routerLink]="['./app-mon-compte']">Mes informations </a>
+    <a [routerLink]="['./app-virement']">Virement </a>
+    <a [routerLink]="['./app-historique']">Historique </a>
+    <a [routerLink]="['./app-commande-chequier']">Commande de chèquier </a>
 </nav>
 
-<section id="">
-<router-outlet></router-outlet>
+<section id="clientDaswboard">
+    <router-outlet></router-outlet>
 </section>

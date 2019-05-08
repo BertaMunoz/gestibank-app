@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { ConseillerComponent } from './conseiller/conseiller.component';
 import { ConseillerService } from './conseiller.service';
-import { GestionClientComponent } from './gestion-client/gestion-client.component';
+import { GestionConseillerComponent } from './gestion-conseiller/gestion-conseiller.component';
 import { AccueilConseillerComponent } from './accueil-conseiller/accueil-conseiller.component';
-import { FormsModule } from '@angular/forms';
+import { ListClientComponent } from './list-client/list-client.component';
 
 const conseillerRoutes: Routes = [
   {
@@ -19,8 +21,12 @@ const conseillerRoutes: Routes = [
             component: AccueilConseillerComponent
           },
           { 
-            path: 'app-gestion-client', 
-            component: GestionClientComponent
+            path: 'app-gestion-conseiller', 
+            component: GestionConseillerComponent
+          },
+          {
+            path: 'app-list-client',
+            component: ListClientComponent
           }
     ],
   }
@@ -30,7 +36,8 @@ const conseillerRoutes: Routes = [
   declarations: [
     ConseillerComponent,
     AccueilConseillerComponent,
-    GestionClientComponent
+    GestionConseillerComponent,
+    ListClientComponent
   ],
   imports: [
     CommonModule,

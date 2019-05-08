@@ -1,0 +1,16 @@
+<h3>Faire un virement</h3>
+<form #demandeVirementForm="ngForm" (ngSubmit)="demandeVirement(demandeVirementForm.value)" method="POST">
+  <label for="date">Date de virement</label>
+  <input type="date" id="date" name="date" ngModel>
+  
+  <label for="numeroCompte">Numéro de compte</label>
+  <input type="text" id="numeroCompte" name="numeroCompte" ngModel>
+
+  <label for="libelle">Libellé</label>
+  <input type="text" id="libelle" name="libelle" ngModel>
+  
+  <label for="somme">Somme</label>
+  <input type="text" id="somme" name="somme" ngModel>
+
+  <input type="submit" [disabled]="!demandeVirementForm.form.valid" value="Valider le virement">
+</form>

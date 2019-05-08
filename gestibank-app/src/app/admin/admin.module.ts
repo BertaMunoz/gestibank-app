@@ -9,9 +9,9 @@ import { AdminComponent } from './admin/admin.component';
 import { AcueilComponent } from './acueil/acueil.component';
 import { GestionConseillerComponent } from './gestion-conseiller/gestion-conseiller.component';
 import { ListClientComponent } from './list-client/list-client.component';
-import { ConseillerService } from '../conseiller/conseiller.service';
 import { AddConseillerComponent } from './add-conseiller/add-conseiller.component';
 
+import { ConseillerService } from '../conseiller/conseiller.service';
 
 const adminRoutes: Routes = [
   {
