@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from 'src/app/model/client';
+import { ClientService } from '../client.service';
 
 @Component({
   selector: 'app-mon-compte',
@@ -7,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MonCompteComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit() {
+   
   }
+
+ 
 
   modifCompteForm(compteItem) {
     console.log(compteItem['name']);

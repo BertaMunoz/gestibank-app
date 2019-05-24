@@ -1,4 +1,21 @@
 <h2>Bienvenue Nom Prénom</h2>
+<div>
+    <p>Ici</p>
+    
+      <div *ngFor="let item of clients" >     
+           <p>{{item.prenom}} </p>
+           <p>{{item.nom}} </p>
+           <p>{{item.email}}</p> 
+           <p>{{item.situation}}</p>
+           <p>{{item.nbrEnfant}}</p>
+           <p>{{item.tel}}</p>
+            
+             
+
+           
+        </div>
+    
+  </div>
 <nav>
     <a [routerLink]="['./']">Accueil </a>
     <a [routerLink]="['./app-mon-compte']">Mes informations </a>
