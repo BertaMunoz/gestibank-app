@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from "@angular/common/http";
+
 
 import { ClientComponent } from './client/client.component';
 import { AddClientComponent } from './add-client/add-client.component';
@@ -10,6 +12,7 @@ import { AccueilClientComponent } from './accueil-client/accueil-client.componen
 import { VirementComponent } from './virement/virement.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { CommandeChequierComponent } from './commande-chequier/commande-chequier.component';
+import { ClientService } from './client.service';
 
 const clientRoutes: Routes = [
   {
@@ -53,6 +56,11 @@ const clientRoutes: Routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(clientRoutes),
+    HttpClientModule
+  ],
+  providers: [
+    ClientService
+
   ], 
   bootstrap: [ClientComponent]
 })
