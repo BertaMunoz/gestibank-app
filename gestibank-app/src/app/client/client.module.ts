@@ -13,6 +13,8 @@ import { VirementComponent } from './virement/virement.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { CommandeChequierComponent } from './commande-chequier/commande-chequier.component';
 import { ClientService } from './client.service';
+import { CompteService } from './compte.service';
+import { OperationService } from './operation.service';
 
 const clientRoutes: Routes = [
   {
@@ -59,8 +61,9 @@ const clientRoutes: Routes = [
     HttpClientModule
   ],
   providers: [
-    ClientService
-
+    ClientService,
+    CompteService,
+    OperationService
   ], 
   bootstrap: [ClientComponent]
 })

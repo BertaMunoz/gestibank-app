@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Operation } from 'src/app/model/operation';
+import { OperationService } from '../operation.service';
 
 @Component({
   selector: 'app-historique',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoriqueComponent implements OnInit {
 
-  constructor() { }
+  operation: Operation[] = []; 
+
+  //operation: Operation; 
+  constructor(private service: OperationService) { }
 
   ngOnInit() {
+    this.service.getAll().subscribe(data =>this.operation = data);
   }
 
 }
