@@ -11,12 +11,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr *ngFor="let item of operations">
       <td>{{item.dateOp}}</td>
       <td>{{item.libelleOp}}</td>
       <td>{{item.typeOp}}</td>
-      <td>{{item.montantOp}}</td>
-      <td>{{item.montantOp}}</td>
+      <td>{{item.montantOpCredit}}</td>
+      <td>{{item.montantOpDebit}}</td>
     </tr>
   </tbody> 
 </table>

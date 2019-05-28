@@ -1,6 +1,8 @@
 <h3>Gestion des notifications</h3>
-<p class="numCompte">Numéro de compte : 123 25896 157</p>
-<p class="solde">Solde : <span>800 €</span></p>
+<div>
+    <p class="numCompte">Numéro de compte : {{currentCompte.numeroCompte}}</p>
+    <p class="solde">Solde : <span>{{currentCompte.solde}} €</span></p>
+</div>
 
 <table>
   <thead>
@@ -12,11 +14,11 @@
       </tr>
   </thead>
   <tbody>
-      <tr>
-        <td>01/01/2019</td>
-        <td>Virement</td>
-        <td></td>
-        <td>100 </td>
+      <tr *ngFor="let item of listOperations">
+        <td>{{item.dateOp}}</td>
+        <td>{{item.libelleOp}}</td>
+        <td>{{item.montantOpCredit}}</td>
+        <td>{{item.montantOpDebit}}</td>
       </tr>
   </tbody>
 </table>
