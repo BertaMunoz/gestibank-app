@@ -15,7 +15,7 @@ export class AddClientComponent implements OnInit {
   }
 
   onSubmit(compteItem) {
-    console.log(compteItem['name']);
+  /*  console.log(compteItem['name']);
 
     const compte = {
       "id": compteItem['id'],
@@ -31,7 +31,7 @@ export class AddClientComponent implements OnInit {
       "nombreEnfant": compteItem['nombreEnfant']
       
     };
-    this.clientService.addClient(compte);
+    this.clientService.addClient(compte);*/
   }
 }
 
