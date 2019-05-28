@@ -2,14 +2,17 @@ export class Operation{
 	private idOp: Number; 
 	private dateOp: Date;
 	private typeOp: CharacterData;
-	private montantOp: Number;
+	private montantOpDebit: Number;
+	private montantOpcredit: Number;
 	private libelleOp: String;
+	montantOpCredit: Number;
 
-	public constructor (idOp: Number ,dateOp :Date, typeOp: CharacterData,  montantOp: Number, libelleOp: String){
+	public constructor (idOp: Number, dateOp :Date, typeOp: CharacterData,  montantOpDebit: Number, montantOpcredit: number, libelleOp: String){
 		this.idOp = idOp;
 		this.dateOp = dateOp;
 		this.typeOp = typeOp;
-		this.montantOp = montantOp;
+		this.montantOpDebit = montantOpDebit;
+		this.montantOpcredit = montantOpcredit;
 		this.libelleOp = libelleOp;
 	}
 
@@ -34,11 +37,18 @@ export class Operation{
 		this.typeOp = value;
 	}
 
-	public getMontantOp(): Number {
-		return this.montantOp;
+	public getMontantOpDebit(): Number {
+		return this.montantOpDebit;
 	}
-	public setMontantOp(value: Number) {
-		this.montantOp = value;
+	public setMontantOpDebit(value: Number) {
+		this.montantOpDebit = value;
+	}
+
+	public getMontantOpCredit(): Number {
+		return this.montantOpCredit;
+	}
+	public setMontantOpCredit(value: Number) {
+		this.montantOpCredit = value;
 	}
 
 	public getLibelleOp(): String {

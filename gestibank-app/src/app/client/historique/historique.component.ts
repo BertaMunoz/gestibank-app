@@ -7,15 +7,15 @@ import { OperationService } from '../operation.service';
   templateUrl: './historique.component.html',
   styleUrls: ['./historique.component.css']
 })
+
 export class HistoriqueComponent implements OnInit {
 
-  operation: Operation[] = []; 
+  operations: Operation[] = []; 
+  operation: Operation; 
 
-  //operation: Operation; 
   constructor(private service: OperationService) { }
 
   ngOnInit() {
-    this.service.getAll().subscribe(data =>this.operation = data);
+    this.service.getAll().subscribe(data =>this.operations = data);
   }
-
 }

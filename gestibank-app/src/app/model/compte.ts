@@ -1,20 +1,20 @@
 export class Compte{	
 	private numeroCompte: Number; 
 	private idClient: Number;
-	private typeCompte: Number;
+	private typeCompte: String;
 	private decouverAutorise: Number;
 	private plafondAutorise: Number;
+	private solde: Number;
 
 	/**
 	 * on a obligatoirement besoin d'un client pour creer un compte <3
 	 */
 
-	
-
-	public constructor (numeroCompte: Number ,idClient :Number, typeCompte: Number,  decouverAutorise: Number, plafondAutorise: Number){
+	public constructor (numeroCompte: Number, idClient: Number, typeCompte: String, solde: Number, decouverAutorise: Number, plafondAutorise: Number){
 		this.idClient = idClient;
 		this.numeroCompte = numeroCompte;
 		this.typeCompte = typeCompte;
+		this.solde = solde;
 		this.decouverAutorise = decouverAutorise;
 		this.plafondAutorise = plafondAutorise;
 	}
@@ -26,22 +26,27 @@ export class Compte{
 		this.numeroCompte = value;
 	}
 
+	public getSolde(): Number {
+		return this.solde;
+	}
+	public setSolde(value: Number) {
+		this.solde = value;
+	}
+
 	public getIdClient(): Number {
 		return this.idClient;
 	}
 	public setIdClient(value: Number) {
 		this.idClient = value;
 	}
-
 	
-	public getTypeCompte(): Number {
+	public getTypeCompte(): String {
 		return this.typeCompte;
 	}
-	public setTypeCompte(value: Number) {
+	public setTypeCompte(value: String) {
 		this.typeCompte = value;
 	}
 
-	
 	public getDecouverAutorise(): Number {
 		return this.decouverAutorise;
 	}
@@ -49,7 +54,6 @@ export class Compte{
 		this.decouverAutorise = value;
 	}
 
-	
 	public getPlafondAutorise(): Number {
 		return this.plafondAutorise;
 	}
