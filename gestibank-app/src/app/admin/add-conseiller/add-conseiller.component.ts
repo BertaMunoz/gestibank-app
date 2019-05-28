@@ -33,5 +33,4 @@ export class AddConseillerComponent implements OnInit {
     };    
     this.conseillerService.addConseiller(conseiller).subscribe(data =>this.listConseillers = data);
   }
-
 }
