@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 
 import { CreateCompteComponent } from './create-compte/create-compte.component';
 import { IndexComponent } from './index/index.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { IndexComponent } from './index/index.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [],

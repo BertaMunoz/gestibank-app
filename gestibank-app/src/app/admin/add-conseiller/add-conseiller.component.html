@@ -1,12 +1,12 @@
 <h2>Nouveau conseiller</h2>
 
   <form #addNewConseillerForm="ngForm" (ngSubmit)="addNewConseiller(addNewConseillerForm.value)" method="POST">
-  <label for="mle">Mle *</label>
+ <!-- <label for="mle">Mle *</label>
   <input type="text" name="mle" id="mle"  ngModel>
 
   <label for="dateEmbauche">Date d'embauche *</label>
   <input type="date" name="dateEmbauche" id="dateEmbauche" ngModel>
-
+-->
   <label for="nom">Nom *</label>
   <input type="text" id="nom" name="nom" ngModel>
 
@@ -19,7 +19,7 @@
   <label for="tel">Téléphone *</label>
   <input type="text" id="tel" name="tel" ngModel>
 
-  <label for="adresse">Adresse</label>
+<!--  <label for="adresse">Adresse</label>
   <textarea name="adresse" id="adresse" cols="30" rows="10" ngModel></textarea>
 
   <label for="codePostale">Code postal</label>
@@ -27,6 +27,6 @@
 
   <label for="ville">Ville</label>
   <input type="text" id="ville" name="ville" ngModel>
-
+-->
   <input type="submit" [disabled]="!addNewConseillerForm.form.valid" value="Envoyer ma demande">
 </form>

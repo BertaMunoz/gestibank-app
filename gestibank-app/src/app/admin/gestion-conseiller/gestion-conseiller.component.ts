@@ -10,41 +10,47 @@ import {Conseiller} from '../../model/conseiller';
 export class GestionConseillerComponent implements OnInit {
 
 
-  listConseillers =  [];
-  lcs: ConseillerService;
+  listConseillers : Conseiller[] = [];
+// lcs: ConseillerService;
+  conseiller: Conseiller ;
 
-  constructor(  ) {
+  constructor( private service:ConseillerService ) {
     
-    this.lcs = new ConseillerService();
+    //this.lcs = new ConseillerService();
   }
+  
 
   ngOnInit() {
-    this.listConseillers = this.lcs.getAll();
-    console.log(this.listConseillers);
+    this.service.getAll().subscribe(data =>this.listConseillers = data);
+ /*   this.listConseillers = this.lcs.getAll();
+    console.log(this.listConseillers);*/
   }
   deleteRow(mle){    
-     this.lcs.delete(mle);
+  
+   //  this.lcs.delete(mle);
+     this.service.delete(mle).subscribe(data =>this.listConseillers = data);
   }
-  update(){
+ /* update(){
     this.listConseillers = this.lcs.getAll();
 
     console.log("coucou");
     console.log(this.lcs.getAll());
-  }
+  }*/
   addNewConseiller(conseillerItem) {
     console.log(conseillerItem['mle']);
 
     const conseiller = {
-      "mle": conseillerItem['mle'],
-      "dateEmbauche": conseillerItem['dateEmbauche'],
+     /* "mle": conseillerItem['mle'],
+      "dateEmbauche": conseillerItem['dateEmbauche'],*/
       "nom": conseillerItem['nom'],
       "prenom": conseillerItem['prenom'],
       "email": conseillerItem['email'],
       "tel": conseillerItem['tel'],
-      "adresse": conseillerItem['adresse'],
+     /* "adresse": conseillerItem['adresse'],
       "codePostale": conseillerItem['codePostale'],
-      "ville": conseillerItem['ville']
+      "ville": conseillerItem['ville']*/
     };    
-    this.lcs.addConseiller(conseiller);
+    this.service.addConseiller(conseiller).subscribe(data =>this.listConseillers = data);
   }
+  
 }
